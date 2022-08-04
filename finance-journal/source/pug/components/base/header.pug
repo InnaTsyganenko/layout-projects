@@ -1,0 +1,42 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "Новости"
+      },
+      {
+        href: "#",
+        text: "Инвестиции"
+      },
+      {
+        href: "#",
+        text: "Бизнесу"
+      },
+      {
+        href: "#",
+        text: "Самозанятым"
+      },
+      {
+        href: "#",
+        text: "Подкасты"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      if(currentUrl === "index.html")
+        +icon("logotype", 238, 16)
+      else
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logotype", 238, 16)
+      nav.main-nav
+        .main-nav__wrapper
+          ul.main-nav__list
+            each link in headerLinks
+              - const activeState = currentUrl === link.href
+              li.main-nav__item
+                if(activeState)
+                  span.main-nav__link.is-active=link.text
+                else
+                  a.main-nav__link(href=link.href)=link.text
