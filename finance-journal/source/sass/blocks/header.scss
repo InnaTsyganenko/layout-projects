@@ -1,12 +1,20 @@
 .header {
-  padding: 28px 0;
-  background-color: $color-default-black;
 
-  .container {
+  &__wrapper-intro {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-default-black;
+    color: $color-default-white;
   }
 
   &__logo {
     color: $color-default-white;
   }
+
+  &__exchange-rates {
+    display: flex;
+  }
 }
+
+

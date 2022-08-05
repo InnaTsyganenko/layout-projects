@@ -24,19 +24,24 @@ mixin header(headerMods, currentUrl)
     ]
 
   header.header(class=headerMods)
-    .container
+    .header__wrapper-intro.container
       if(currentUrl === "index.html")
         +icon("logotype", 238, 16)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon("logotype", 238, 16)
-      nav.main-nav
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+      .header__exchange-rates
+          p.header__exchange-rates--usd USD
+            span.header__exchange-rates--usd-value &nbsp;70.91&nbsp;&#8381;
+          p.header__exchange-rates--eur EUR
+            span.header__exchange-rates--eur-value &nbsp;81.59&nbsp;&#8381;
+    nav.main-nav.container
+      .main-nav__wrapper
+        ul.main-nav__list
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__item
+              if(activeState)
+                span.main-nav__link.is-active=link.text
+              else
+                a.main-nav__link(href=link.href)=link.text

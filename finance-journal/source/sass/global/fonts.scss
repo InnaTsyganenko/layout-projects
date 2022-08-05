@@ -1,21 +1,50 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Rouble";
 
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2"),
-//     url("../fonts/rouble.woff") format("woff");
-// }
+  font-display: swap;
+  src:
+    url("../fonts/rouble.woff2") format("woff2"),
+    url("../fonts/rouble.woff") format("woff");
+}
 
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
+  font-family: "Source Sans Pro";
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../../fonts/SourceSansPro-Regular.woff2") format("woff2"),
+    url("../../fonts/SourceSansPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Source Sans Pro SemiBold";
+  font-display: swap;
+  src:
+    url("../../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
+    url("../../fonts/SourceSansPro-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Source Sans Pro Bold";
+  font-display: swap;
+  src:
+    url("../../fonts/SourceSansPro-Bold.woff2") format("woff2"),
+    url("../../fonts/SourceSansPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Source Sans Pro Italic";
+  font-display: swap;
+  src:
+    url("../../fonts/SourceSansPro-Italic.woff2") format("woff2"),
+    url("../../fonts/SourceSansPro-Italic.woff") format("woff");
 }
