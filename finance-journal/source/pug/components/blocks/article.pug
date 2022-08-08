@@ -130,6 +130,20 @@ mixin article()
         p.subsection__text Один из вариантов инвестирования – работа с зарубежными брокерами. Такой способ имеет свою плюсы и минусы. Несмотря на то, что этот вариант похож на работу с российскими брокерами, в нем есть
           a.footnote-label(href="#anchor2", id="anchor2-ref") свои нюансы #[sup.subsection__text-sup 3].
 
+        .brokers
+          table.brokers__table
+          caption.brokers__caption Американские брокеры, работающие с резидентами из России
+          colgroup
+            col.brokers__col-name
+            col.brokers__col-value(span="3")
+          tr.brokers__tr
+            th.brokers__th Брокер
+            th.brokers__th Комиссия за вывод средств
+            th.brokers__th Комиссия за сделку
+            th.brokers__th Русскоязычная поддержка
+
+
+
 
 
       //- вставлять блоки во внешний контейнер неверно
