@@ -45,3 +45,7 @@ mixin header(headerMods, currentUrl)
                 span.main-nav__link.is-active=link.text
               else
                 a.main-nav__link(href=link.href)=link.text
+        .user-menu
+          ul.user-menu__list
+            li.user-menu__item.item-search Поиск
+            li.user-menu__item.item-mailing-list Рассылка

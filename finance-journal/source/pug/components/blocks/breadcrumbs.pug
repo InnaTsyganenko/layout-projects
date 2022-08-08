@@ -1,0 +1,31 @@
+mixin breadcrumbs(currentUrl)
+  -
+    const breadcrumbsLinks = [
+      {
+        href: "#",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Инвестиции"
+      },
+      {
+        href: "#",
+        text: "Для начинающих"
+      },
+      {
+        href: "#",
+        text: "Главное про ИИС"
+      },
+    ]
+
+  .breadcrumbs
+    .breadcrumbs__wrapper.container
+      ul.breadcrumbs__list
+        each link in breadcrumbsLinks
+          - const activeState = currentUrl === link.href
+          li.breadcrumbs__item
+            if(activeState)
+              span.breadcrumbs__link.is-active=link.text
+            else
+              a.breadcrumbs__link(href=link.href)=link.text
