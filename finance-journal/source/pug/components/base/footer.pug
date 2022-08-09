@@ -1,3 +1,52 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
-    .container
+    footer.main-footer
+      .main-footer-wrapper
+        .container.container-flex
+          .main-footer-col
+            a.main-footer-logo(href="#")
+              img(src="img/logo.svg", width="238", height="16", alt="Finance Journal")
+            ul.social-list
+              li.social-item
+                a.social-link.social-link-vk(href="#")
+                  span.visually-hidden VK
+              li.social-item
+                a.social-link.social-link-facebook(href="#")
+                  span.visually-hidden Facebook
+              li.social-item
+                a.social-link.social-link-instagram(href="#")
+                  span.visually-hidden Instagram
+              li.social-item
+                a.social-link.social-link-twitter(href="#")
+                  span.visually-hidden Twitter
+          ul.main-footer-nav
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Новости
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Инвестиции
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Бизнесу
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Самозанятым
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Подкасты
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") О журнале
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Реклама
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Вакансии
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Контакты
+            li.main-footer-nav-item
+              a.main-footer-nav-link(href="#") Карта сайта
+          .main-footer-col
+            form.subscribe(action="#", method="POST")
+              label.visually-hidden(for="subscribe-email") E-mail пользователя
+              input.subscribe-field#subscribe-email(type="text", name="subscribe-email", placeholder="Введите свой e-mail")
+              button.subscribe-button(type="submit") Подписаться
+            p.agreements Нажимая кнопку «Подписаться», вы соглашаетесь с условиями обработки персональных данных
+      .main-footer-wrapper
+        .container.container-flex
+          p.copyright © Finance Journal 2020
+          a.policy(href="#") Политика конфиденциальности
