@@ -84,7 +84,7 @@ mixin article()
             span.meta.meta-read-time 15 минут
         h1.article-header__title Главное про ИИС: что, зачем и как
         p.article-header__intro Краткое руководство для тех, кто хочет инвестировать, но не знает с чего начать
-        +img("content", "placeholder", "jpg", 614, 423, "Пример")
+        +img("content", "business-man", "png", 614, 423, "Деловой мужчина в очках")
 
     .article-main.container
       p.article-main__lead Количество зарегистрированных на Московской бирже индивидуальных инвестиционных счетов по состоянию на 6 апреля 2020 года достигло
@@ -92,8 +92,8 @@ mixin article()
       p.article-main__intro-text #[abbr(title="Индивидуальный инвестиционный счёт") #[a(href="#") ИИС]] с каждым годом становится популярнее, и если раньше казалось, что это #[del только для олигархов] #[ins сложно], то сейчас очевидно, что инвестировать может каждый.
       .intro-chart
         figure
-          +img("content", "placeholder", "jpg", 614, 423, "Пример")
-          figcaption Рост количества открытых ИИС, тыс
+          +img("content", "diagram-1", "jpg", 700, 339, "Рост количества открытых ИИС, тыс")
+          figcaption Данные предоставлены Московской Биржей в 2020 году
         p.article-main__intro-text В статье разберем главные вопросы об инвестициях, с чего начать и как #[del не облажаться] #[ins действовать правильно].
 
         p.article-main__nav-title
@@ -214,7 +214,7 @@ mixin article()
               | Что выбрать?
 
           figure
-            +img("./img/content/", "placeholder", "png", 700, 370, "Инвестиции владельцев ИИС")
+            +img("content", "diagram-2", "jpg", 700, 370, "Инвестиции владельцев ИИС")
             figcaption Данные предоставлены Московской Биржей
 
         section.article-main__subsection.subsection#recoupment
@@ -369,7 +369,7 @@ mixin article()
           ul.aside-articles
             li
               article.aside-article
-                img(src="img/photo-1.png", width="370", height="200", alt="Трёхмерный график")
+                +img("content", "graph", "jpg", 370, 200, "Трёхмерный график")
                 .aside-article-content
                   h3 Как зарабатывать на ИИС
                   p Сейчас лучшее время для открытия ИИС — успеете до конца этого года, в следующем году получите вычет.
@@ -385,7 +385,7 @@ mixin article()
                 a(href="#") Читать дальше
             li
               article.aside-article
-                img(src="img/photo-2.png", width="370", height="200", alt="Трёхмерный иконка для сообщений")
+                +img("content", "message", "jpg", 370, 200, "Трёхмерная иконка для сообщений")
                 .aside-article-content
                   h3 Ответы на вопросы
                   p Михаил, частный инвестор, отвечает на самые часто возникающие вопросы об ИИС.
@@ -401,7 +401,7 @@ mixin article()
                 a(href="#") Читать дальше
             li
             article.aside-article
-              img(src="img/photo-3.png", width="370", height="200", alt="Боксёрские перчатки")
+              +img("content", "mitt", "jpg", 370, 200, "Боксёрские перчатки")
               .aside-article-content
                 h3 Торги на бирже
                 p Биржа – организатор торгов акциями и облигациями. Она нужна для того, чтобы облегчить вам работу, обеспечить безопасную сделку в обмен на процент.

@@ -23,29 +23,39 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods)
-    .header__wrapper-intro.container
-      if(currentUrl === "index.html")
-        +icon("logotype", 238, 16)
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
+  header.main-header(class=headerMods)
+    .main-header__wrapper-intro
+      .container
+        if(currentUrl === "index.html")
           +icon("logotype", 238, 16)
-      .header__exchange-rates
-          p.header__exchange-rates--usd USD
-            span.header__exchange-rates--usd-value &nbsp;70.91&nbsp;&#8381;
-          p.header__exchange-rates--eur EUR
-            span.header__exchange-rates--eur-value &nbsp;81.59&nbsp;&#8381;
-    nav.main-nav.container
-      .main-nav__wrapper
-        ul.main-nav__list
-          each link in headerLinks
-            - const activeState = currentUrl === link.href
-            li.main-nav__item
-              if(activeState)
-                span.main-nav__link.is-active=link.text
-              else
-                a.main-nav__link(href=link.href)=link.text
-        .user-menu
-          ul.user-menu__list
-            li.user-menu__item.item-search Поиск
-            li.user-menu__item.item-mailing-list Рассылка
+        else
+          a.main-header__logo(href="index.html", aria-label="Переход на главную")
+            +icon("logotype", 238, 16)
+        ul.main-header__exchange-rates-list
+          li.main-header__exchange-rates-item
+            a.main-header__exchange-rates-link(href="#")
+              span.indicator-diff.indicator-diff-fall
+                span.visually-hidden Падение показателя
+              span.main-header__exchange-rates--name USD
+              span.main-header__exchange-rates--value &nbsp;70.91&nbsp;&#8381;
+          li.main-header__exchange-rates-item
+            a.main-header__exchange-rates-link(href="#")
+              span.indicator-diff.indicator-diff-grow
+                span.visually-hidden Рост показателя
+              span.main-header__exchange-rates--name EUR
+              span.main-header__exchange-rates--value &nbsp;81.59&nbsp;&#8381;
+    nav.main-header__nav.main-nav
+      .container
+        .main-nav__wrapper
+          ul.main-nav__list
+            each link in headerLinks
+              - const activeState = currentUrl === link.href
+              li.main-nav__item
+                if(activeState)
+                  span.main-nav__link.is-active=link.text
+                else
+                  a.main-nav__link(href=link.href)=link.text
+          .user-menu
+            ul.user-menu__list
+              li.user-menu__item.item-search Поиск
+              li.user-menu__item.item-mailing-list Рассылка
