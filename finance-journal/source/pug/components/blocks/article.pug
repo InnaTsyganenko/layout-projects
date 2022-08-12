@@ -416,57 +416,57 @@ mixin article()
               .article-footer__meta-col
                 span.meta.article-footer__meta-ico.article-footer__meta--views 100k
 
-    aside.article-main__aside.article-aside
+    aside.article-main__aside.articles-aside
       .container
-        .article-aside__wrapper
-        h2 Об инвестициях для начинающих
-        a.see-all(href="#") Смотреть все
-        ul.aside-articles
-          li
-            article.aside-article
-              +img("content", "graph", "jpg", 370, 200, "Трёхмерный график")
-              .aside-article-content
-                h3 Как зарабатывать на ИИС
-                p Сейчас лучшее время для открытия ИИС — успеете до конца этого года, в следующем году получите вычет.
-                p С помощью нашего калькулятора вы можете посчитать, сколько заработаете на ИИС при разных вариантах инвестирования, при вычете взноса на доход или вычете на взнос.
-                footer
-                  .meta-row
-                    .meta-col
-                      time.meta.meta-datetime(datetime="2020-06-27") 27.06.20
-                    .meta-col
-                      span.meta.meta-ico.meta-views 114k
-                    .meta-col
-                      span.meta.meta-ico.meta-readingtime 10 минут
-              a(href="#") Читать дальше
-          li
-            article.aside-article
-              +img("content", "message", "jpg", 370, 200, "Трёхмерная иконка для сообщений")
-              .aside-article-content
-                h3 Ответы на вопросы
-                p Михаил, частный инвестор, отвечает на самые часто возникающие вопросы об ИИС.
-                p Какую биржу выбрать, какие есть риски, куда лучше инвестировать, как получить прибыль от ETF и многое другое. Пишите нам ваши вопросы и мы обязательно на них ответим.
-                footer
-                  .meta-row
-                    .meta-col
-                      time.meta.meta-datetime(datetime="2020-06-21") 21.06.20
-                    .meta-col
-                      span.meta.meta-ico.meta-views 129k
-                    .meta-col
-                      span.meta.meta-ico.meta-readingtime 12 минут
-              a(href="#") Читать дальше
-          li
-          article.aside-article
-        +img("content", "mitt", "jpg", 370, 200, "Боксёрские перчатки")
-        .aside-article-content
-          h3 Торги на бирже
-          p Биржа – организатор торгов акциями и облигациями. Она нужна для того, чтобы облегчить вам работу, обеспечить безопасную сделку в обмен на процент.
-          p Вы можете торговать и без понимания работы торгов. Но знания о внутренних процессах дадут вам преимущество.
-          footer
-            .meta-row
-              .meta-col
-                time.meta.meta-datetime(datetime="2020-06-16") 16.06.20
-              .meta-col
-                span.meta.meta-ico.meta-views 153k
-              .meta-col
-                span.meta.meta-ico.meta-readingtime 15 минут
-        a(href="#") Читать дальше
+        .articles-aside__wrapper
+          h2.articles-aside__title Об инвестициях для начинающих
+          a.articles-aside__see-all(href="#") Смотреть все
+          ul.articles-aside__list
+            li.articles-aside__item
+              article.articles-aside__article.article-card
+                +img("content", "graph", "jpg", 370, 200, "Трёхмерный график")
+                .article-card__container
+                  h3.article-card__caption Как зарабатывать на ИИС
+                  p.article-card__text Сейчас лучшее время для открытия ИИС — успеете до конца этого года, в следующем году получите вычет.
+                  p.article-card__text С помощью нашего калькулятора вы можете посчитать, сколько заработаете на ИИС при разных вариантах инвестирования, при вычете взноса на доход или вычете на взнос.
+                  footer.article-card__footer
+                    .article-card__meta-row
+                      .article-card__meta-col
+                        time.article-card__meta.meta-datetime(datetime="2020-06-27") 27.06.20
+                      .article-card__meta-col
+                        span.article-card__meta.meta-ico.meta-views 114k
+                      .article-card__meta-col
+                        span.article-card__meta.meta-ico.meta-readingtime 10 минут
+                a.article-card__link.link-read-more(href="#") Читать дальше
+            li.articles-aside__item
+              article.articles-aside__article.article-card
+                +img("content", "message", "jpg", 370, 200, "Трёхмерная иконка для сообщений")
+                .article-card__container
+                  h3.article-card__caption Ответы на вопросы
+                  p.article-card__text Михаил, частный инвестор, отвечает на самые часто возникающие вопросы об ИИС.
+                  p.article-card__text Какую биржу выбрать, какие есть риски, куда лучше инвестировать, как получить прибыль от ETF и многое другое. Пишите нам ваши вопросы и мы обязательно на них ответим.
+                  footer.article-card__footer
+                    .article-card__meta-row
+                      .article-card__meta-col
+                        time.article-card__meta.meta-datetime(datetime="2020-06-21") 21.06.20
+                      .article-card__meta-col
+                        span.article-card__meta.meta-ico.meta-views 129k
+                      .article-card__meta-col
+                        span.article-card__meta.meta-ico.meta-readingtime 12 минут
+                a.article-card__link.link-read-more(href="#")(href="#") Читать дальше
+            li.articles-aside__item
+              article.articles-aside__article.article-card
+                +img("content", "mitt", "jpg", 370, 200, "Боксёрские перчатки")
+                .article-card__container
+                  h3.article-card__caption Торги на бирже
+                  p.article-card__text Биржа – организатор торгов акциями и облигациями. Она нужна для того, чтобы облегчить вам работу, обеспечить безопасную сделку в обмен на процент.
+                  p.article-card__text Вы можете торговать и без понимания работы торгов. Но знания о внутренних процессах дадут вам преимущество.
+                  footer.article-card__footer
+                    .article-card__meta-row
+                      .article-card__meta-col
+                        time.article-card__meta.meta-datetime(datetime="2020-06-16") 16.06.20
+                      .article-card__meta-col
+                        span.article-card__meta.meta-ico.meta-views 153k
+                      .article-card__meta-col
+                        span.article-card__meta.meta-ico.meta-readingtime 15 минут
+                a.article-card__link.link-read-more(href="#")(href="#") Читать дальше
